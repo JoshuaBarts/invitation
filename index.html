@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<style>
+    body {
+        margin: 0 auto;
+        overflow: hidden;
+        background-color: pink;
+    }   
+    div {
+        overflow: hidden;
+        background-size: contain;
+        display: block;
+        border: 8px solid black;
+        width:430px;
+        height: 100%;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+    #button {
+        transition-duration: 0.4s;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        background-color: pink;
+        border: 2px solid black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        position: relative;
+        top: 607px;
+        left: 180px;
+    }
+    #button:hover {
+        cursor: pointer;
+        color: white;
+    }
+    #hidden-text {
+        display: inline-block;
+        position: relative;
+        top: 620px;
+        left: 115px;
+    }
+    #info {
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+        left: 55px;
+    }
+    
+</style>
+
+<body>
+    <div class="wrapper">
+        <button id="button">계 좌</button>
+        <p id="hidden-text">이은주 농협 749-12-266715</p>
+        <img src="edit.png" alt="invitation">
+        <p id="info">
+            "계좌"를 누르면 계좌번호가 나옵니다.
+        </p>
+    </div>
+    
+    
+    <script>
+        $(document).ready(function() {
+            $("#hidden-text").hide()
+
+            $("button").click(function() {
+                $("button").hide();
+                $("#hidden-text").fadeIn("slow");
+                
+            });
+        });
+    </script>
+</body>
+</html>
